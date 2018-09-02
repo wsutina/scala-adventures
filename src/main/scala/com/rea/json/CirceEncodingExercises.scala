@@ -20,7 +20,7 @@ object CirceEncodingExercises {
     *
     */
 
-  def writeJsonString(value: String): String = ???
+  def writeJsonString(value: String): String = Json.fromString(value).toString()
 
   /** Exercise 2
     * Encode a simple boolean  Hint: use Json.fromBoolean method.
