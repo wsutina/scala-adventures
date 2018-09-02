@@ -32,7 +32,7 @@ object CirceEncodingExercises {
     * This time use the Json.fromValues method, which takes a Iterable[Json]  (a List[_] is an Iterable[_]!)
     * Hint: use the methods explored above to convert the List[String] to List[Json].
     */
-  def writeJsonArray(values: List[String]): String = ???
+  def writeJsonArray(values: List[String]): String = Json.fromValues(values.map(Json.fromString)).noSpaces
 
   /** Exercise 4
     * Encode our first object
