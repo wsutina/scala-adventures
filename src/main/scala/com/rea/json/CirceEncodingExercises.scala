@@ -42,7 +42,11 @@ object CirceEncodingExercises {
     */
   case class Agent(surname: String, firstNames: List[String], principal: Boolean, agentId: Option[String] = None)
 
-  def writeAgent(agent: Agent): String = ???
+  def writeAgent(agent: Agent): String = Json.obj(
+    ("surname", Json.fromString(agent.surname)),
+    ("firstNames", Json.fromValues(agent.firstNames.map(Json.fromString))),
+    ("principal", Json.fromBoolean(agent.principal))
+  ).noSpaces
 
   /** Introducing Encoders
     * This is getting a bit tedious.  Wouldn't it be nice if it could work out how to encode the field
