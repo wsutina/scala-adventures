@@ -25,7 +25,7 @@ object CirceEncodingExercises {
   /** Exercise 2
     * Encode a simple boolean  Hint: use Json.fromBoolean method.
     */
-  def writeJsonBoolean(value: Boolean): String = ???
+  def writeJsonBoolean(value: Boolean): String = Json.fromBoolean(value).toString()
 
   /** Exercise 3
     * Encode an array of strings
